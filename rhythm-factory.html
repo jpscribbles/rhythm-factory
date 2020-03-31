@@ -1,0 +1,4739 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rhythm Factory</title>
+
+  </head>
+  <body>
+  
+  <style>
+  html { 
+    overflow-y: scroll;
+  }
+
+
+  body {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+  body {
+    opacity: 1;
+height:1000px;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+</style>
+
+<script>document.body.className += 'fade-out';</script>
+
+
+  <header>
+    
+      <h1>Rhythm Factory</h1>
+  
+  </header>
+
+  <hr>
+
+
+    <br>
+    
+<table style="width:100%"id="grouped-headers">
+    <thead>
+        <tr>
+            <th colspan="2" style="background-color:green">SubGroup 1</th>
+            <th colspan="5">SubGroup 2</th>
+        </tr>
+        <tr>
+            <th  nowrap="">Rhythm  <img src="tablefilter/style/themes/updown.png"></th>
+            <th  nowrap="">Pulse  <img src="tablefilter/style/themes/updown.png"></th>
+            <th   >Beat  <img src="tablefilter/style/themes/updown.png"></th>
+            <th   nowrap="">Partition  <img src="tablefilter/style/themes/updown.png"></th>
+            <th  nowrap="">Grouping  <img src="tablefilter/style/themes/updown.png"></th>
+            <th   >Composition  <img src="tablefilter/style/themes/updown.png"></th>
+            <th   nowrap="">Start  <img src="tablefilter/style/themes/updown.png"></th>
+            
+        </tr>
+    </thead>
+    <tbody style="text-align:left">
+
+
+<tr>
+<td>⚪</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td>e2</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚫</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚪⚪</td>
+<td>2</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td>e4</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>e12</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚫⚪</td>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫</td>
+<td>2</td>
+<td>2</td>
+<td>11</td>
+<td>11</td>
+<td>11</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪</td>
+<td>3</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td>e6</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫</td>
+<td>3</td>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>e23</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪</td>
+<td>3</td>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>e13</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫</td>
+<td>3</td>
+<td>2</td>
+<td>21</td>
+<td>12</td>
+<td>e112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪</td>
+<td>3</td>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫</td>
+<td>3</td>
+<td>2</td>
+<td>21</td>
+<td>21</td>
+<td>21</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪</td>
+<td>3</td>
+<td>2</td>
+<td>21</td>
+<td>12</td>
+<td>12</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫</td>
+<td>3</td>
+<td>3</td>
+<td>111</td>
+<td>111</td>
+<td>111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪</td>
+<td>4</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td>e8</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫</td>
+<td>4</td>
+<td>1</td>
+<td>4</td>
+<td>4</td>
+<td>e34</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪</td>
+<td>4</td>
+<td>1</td>
+<td>4</td>
+<td>4</td>
+<td>e24</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫</td>
+<td>4</td>
+<td>2</td>
+<td>31</td>
+<td>13</td>
+<td>e213</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪</td>
+<td>4</td>
+<td>1</td>
+<td>4</td>
+<td>4</td>
+<td>e14</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫</td>
+<td>4</td>
+<td>2</td>
+<td>22</td>
+<td>22</td>
+<td>e122</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪</td>
+<td>4</td>
+<td>2</td>
+<td>31</td>
+<td>13</td>
+<td>e113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫</td>
+<td>4</td>
+<td>3</td>
+<td>211</td>
+<td>112</td>
+<td>e1112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪</td>
+<td>4</td>
+<td>1</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫</td>
+<td>4</td>
+<td>2</td>
+<td>31</td>
+<td>31</td>
+<td>31</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪</td>
+<td>4</td>
+<td>2</td>
+<td>22</td>
+<td>22</td>
+<td>22</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫</td>
+<td>4</td>
+<td>3</td>
+<td>211</td>
+<td>211</td>
+<td>211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪</td>
+<td>4</td>
+<td>2</td>
+<td>31</td>
+<td>13</td>
+<td>13</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫</td>
+<td>4</td>
+<td>3</td>
+<td>211</td>
+<td>121</td>
+<td>121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪</td>
+<td>4</td>
+<td>3</td>
+<td>211</td>
+<td>112</td>
+<td>112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫</td>
+<td>4</td>
+<td>4</td>
+<td>1111</td>
+<td>1111</td>
+<td>1111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚪</td>
+<td>5</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td>e10</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚫</td>
+<td>5</td>
+<td>1</td>
+<td>5</td>
+<td>5</td>
+<td>e45</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚪</td>
+<td>5</td>
+<td>1</td>
+<td>5</td>
+<td>5</td>
+<td>e35</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚫</td>
+<td>5</td>
+<td>2</td>
+<td>41</td>
+<td>14</td>
+<td>e314</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚪</td>
+<td>5</td>
+<td>1</td>
+<td>5</td>
+<td>5</td>
+<td>e25</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚫</td>
+<td>5</td>
+<td>2</td>
+<td>32</td>
+<td>23</td>
+<td>e223</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚪</td>
+<td>5</td>
+<td>2</td>
+<td>41</td>
+<td>14</td>
+<td>e214</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚫</td>
+<td>5</td>
+<td>3</td>
+<td>311</td>
+<td>113</td>
+<td>e2113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚪</td>
+<td>5</td>
+<td>1</td>
+<td>5</td>
+<td>5</td>
+<td>e15</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚫</td>
+<td>5</td>
+<td>2</td>
+<td>32</td>
+<td>32</td>
+<td>e132</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚪</td>
+<td>5</td>
+<td>2</td>
+<td>32</td>
+<td>23</td>
+<td>e123</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚫</td>
+<td>5</td>
+<td>3</td>
+<td>221</td>
+<td>212</td>
+<td>e1212</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚪</td>
+<td>5</td>
+<td>2</td>
+<td>41</td>
+<td>14</td>
+<td>e114</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚫</td>
+<td>5</td>
+<td>3</td>
+<td>221</td>
+<td>122</td>
+<td>e1122</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚪</td>
+<td>5</td>
+<td>3</td>
+<td>311</td>
+<td>113</td>
+<td>e1113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚫</td>
+<td>5</td>
+<td>4</td>
+<td>2111</td>
+<td>1112</td>
+<td>e11112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚪</td>
+<td>5</td>
+<td>1</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚫</td>
+<td>5</td>
+<td>2</td>
+<td>41</td>
+<td>41</td>
+<td>41</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚪</td>
+<td>5</td>
+<td>2</td>
+<td>32</td>
+<td>32</td>
+<td>32</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚫</td>
+<td>5</td>
+<td>3</td>
+<td>311</td>
+<td>311</td>
+<td>311</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚪</td>
+<td>5</td>
+<td>2</td>
+<td>32</td>
+<td>23</td>
+<td>23</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚫</td>
+<td>5</td>
+<td>3</td>
+<td>221</td>
+<td>221</td>
+<td>221</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚪</td>
+<td>5</td>
+<td>3</td>
+<td>221</td>
+<td>212</td>
+<td>212</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚫</td>
+<td>5</td>
+<td>4</td>
+<td>2111</td>
+<td>2111</td>
+<td>2111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚪</td>
+<td>5</td>
+<td>2</td>
+<td>41</td>
+<td>14</td>
+<td>14</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚫</td>
+<td>5</td>
+<td>3</td>
+<td>311</td>
+<td>131</td>
+<td>131</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚪</td>
+<td>5</td>
+<td>3</td>
+<td>221</td>
+<td>122</td>
+<td>122</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚫</td>
+<td>5</td>
+<td>4</td>
+<td>2111</td>
+<td>1211</td>
+<td>1211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚪</td>
+<td>5</td>
+<td>3</td>
+<td>311</td>
+<td>113</td>
+<td>113</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚫</td>
+<td>5</td>
+<td>4</td>
+<td>2111</td>
+<td>1121</td>
+<td>1121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚪</td>
+<td>5</td>
+<td>4</td>
+<td>2111</td>
+<td>1112</td>
+<td>1112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚫</td>
+<td>5</td>
+<td>5</td>
+<td>11111</td>
+<td>11111</td>
+<td>11111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚪⚪</td>
+<td>6</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td>e12</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚪⚫</td>
+<td>6</td>
+<td>1</td>
+<td>6</td>
+<td>6</td>
+<td>e56</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚫⚪</td>
+<td>6</td>
+<td>1</td>
+<td>6</td>
+<td>6</td>
+<td>e46</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚫⚫</td>
+<td>6</td>
+<td>2</td>
+<td>51</td>
+<td>15</td>
+<td>e415</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚪⚪</td>
+<td>6</td>
+<td>1</td>
+<td>6</td>
+<td>6</td>
+<td>e36</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚪⚫</td>
+<td>6</td>
+<td>2</td>
+<td>42</td>
+<td>24</td>
+<td>e324</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚫⚪</td>
+<td>6</td>
+<td>2</td>
+<td>51</td>
+<td>15</td>
+<td>e315</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚫⚫</td>
+<td>6</td>
+<td>3</td>
+<td>411</td>
+<td>114</td>
+<td>e3114</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚪⚪</td>
+<td>6</td>
+<td>1</td>
+<td>6</td>
+<td>6</td>
+<td>e26</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚪⚫</td>
+<td>6</td>
+<td>2</td>
+<td>33</td>
+<td>33</td>
+<td>e233</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚫⚪</td>
+<td>6</td>
+<td>2</td>
+<td>42</td>
+<td>24</td>
+<td>e224</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚫⚫</td>
+<td>6</td>
+<td>3</td>
+<td>321</td>
+<td>213</td>
+<td>e2213</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚪⚪</td>
+<td>6</td>
+<td>2</td>
+<td>51</td>
+<td>15</td>
+<td>e215</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚪⚫</td>
+<td>6</td>
+<td>3</td>
+<td>321</td>
+<td>123</td>
+<td>e2123</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚫⚪</td>
+<td>6</td>
+<td>3</td>
+<td>411</td>
+<td>114</td>
+<td>e2114</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚫⚫</td>
+<td>6</td>
+<td>4</td>
+<td>3111</td>
+<td>1113</td>
+<td>e21113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚪⚪</td>
+<td>6</td>
+<td>1</td>
+<td>6</td>
+<td>6</td>
+<td>e16</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚪⚫</td>
+<td>6</td>
+<td>2</td>
+<td>42</td>
+<td>42</td>
+<td>e142</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚫⚪</td>
+<td>6</td>
+<td>2</td>
+<td>33</td>
+<td>33</td>
+<td>e133</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚫⚫</td>
+<td>6</td>
+<td>3</td>
+<td>321</td>
+<td>312</td>
+<td>e1312</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚪⚪</td>
+<td>6</td>
+<td>2</td>
+<td>42</td>
+<td>24</td>
+<td>e124</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚪⚫</td>
+<td>6</td>
+<td>3</td>
+<td>222</td>
+<td>222</td>
+<td>e1222</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚫⚪</td>
+<td>6</td>
+<td>3</td>
+<td>321</td>
+<td>213</td>
+<td>e1213</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚫⚫</td>
+<td>6</td>
+<td>4</td>
+<td>2211</td>
+<td>2112</td>
+<td>e12112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚪⚪</td>
+<td>6</td>
+<td>2</td>
+<td>51</td>
+<td>15</td>
+<td>e115</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚪⚫</td>
+<td>6</td>
+<td>3</td>
+<td>321</td>
+<td>132</td>
+<td>e1132</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚫⚪</td>
+<td>6</td>
+<td>3</td>
+<td>321</td>
+<td>123</td>
+<td>e1123</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚫⚫</td>
+<td>6</td>
+<td>4</td>
+<td>2211</td>
+<td>1212</td>
+<td>e11212</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚪⚪</td>
+<td>6</td>
+<td>3</td>
+<td>411</td>
+<td>114</td>
+<td>e1114</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚪⚫</td>
+<td>6</td>
+<td>4</td>
+<td>2211</td>
+<td>1122</td>
+<td>e11122</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚫⚪</td>
+<td>6</td>
+<td>4</td>
+<td>3111</td>
+<td>1113</td>
+<td>e11113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚫⚫</td>
+<td>6</td>
+<td>5</td>
+<td>21111</td>
+<td>11112</td>
+<td>e111112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚪⚪</td>
+<td>6</td>
+<td>1</td>
+<td>6</td>
+<td>6</td>
+<td>6</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚪⚫</td>
+<td>6</td>
+<td>2</td>
+<td>51</td>
+<td>51</td>
+<td>51</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚫⚪</td>
+<td>6</td>
+<td>2</td>
+<td>42</td>
+<td>42</td>
+<td>42</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚫⚫</td>
+<td>6</td>
+<td>3</td>
+<td>411</td>
+<td>411</td>
+<td>411</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚪⚪</td>
+<td>6</td>
+<td>2</td>
+<td>33</td>
+<td>33</td>
+<td>33</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚪⚫</td>
+<td>6</td>
+<td>3</td>
+<td>321</td>
+<td>321</td>
+<td>321</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚫⚪</td>
+<td>6</td>
+<td>3</td>
+<td>321</td>
+<td>312</td>
+<td>312</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚫⚫</td>
+<td>6</td>
+<td>4</td>
+<td>3111</td>
+<td>3111</td>
+<td>3111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚪⚪</td>
+<td>6</td>
+<td>2</td>
+<td>42</td>
+<td>24</td>
+<td>24</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚪⚫</td>
+<td>6</td>
+<td>3</td>
+<td>321</td>
+<td>231</td>
+<td>231</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚫⚪</td>
+<td>6</td>
+<td>3</td>
+<td>222</td>
+<td>222</td>
+<td>222</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚫⚫</td>
+<td>6</td>
+<td>4</td>
+<td>2211</td>
+<td>2211</td>
+<td>2211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚪⚪</td>
+<td>6</td>
+<td>3</td>
+<td>321</td>
+<td>213</td>
+<td>213</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚪⚫</td>
+<td>6</td>
+<td>4</td>
+<td>2211</td>
+<td>2121</td>
+<td>2121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚫⚪</td>
+<td>6</td>
+<td>4</td>
+<td>2211</td>
+<td>2112</td>
+<td>2112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚫⚫</td>
+<td>6</td>
+<td>5</td>
+<td>21111</td>
+<td>21111</td>
+<td>21111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚪⚪</td>
+<td>6</td>
+<td>2</td>
+<td>51</td>
+<td>15</td>
+<td>15</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚪⚫</td>
+<td>6</td>
+<td>3</td>
+<td>411</td>
+<td>141</td>
+<td>141</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚫⚪</td>
+<td>6</td>
+<td>3</td>
+<td>321</td>
+<td>132</td>
+<td>132</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚫⚫</td>
+<td>6</td>
+<td>4</td>
+<td>3111</td>
+<td>1311</td>
+<td>1311</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚪⚪</td>
+<td>6</td>
+<td>3</td>
+<td>321</td>
+<td>123</td>
+<td>123</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚪⚫</td>
+<td>6</td>
+<td>4</td>
+<td>2211</td>
+<td>1221</td>
+<td>1221</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚫⚪</td>
+<td>6</td>
+<td>4</td>
+<td>2211</td>
+<td>1212</td>
+<td>1212</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚫⚫</td>
+<td>6</td>
+<td>5</td>
+<td>21111</td>
+<td>12111</td>
+<td>12111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚪⚪</td>
+<td>6</td>
+<td>3</td>
+<td>411</td>
+<td>114</td>
+<td>114</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚪⚫</td>
+<td>6</td>
+<td>4</td>
+<td>3111</td>
+<td>1131</td>
+<td>1131</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚫⚪</td>
+<td>6</td>
+<td>4</td>
+<td>2211</td>
+<td>1122</td>
+<td>1122</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚫⚫</td>
+<td>6</td>
+<td>5</td>
+<td>21111</td>
+<td>11211</td>
+<td>11211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚪⚪</td>
+<td>6</td>
+<td>4</td>
+<td>3111</td>
+<td>1113</td>
+<td>1113</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚪⚫</td>
+<td>6</td>
+<td>5</td>
+<td>21111</td>
+<td>11121</td>
+<td>11121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚫⚪</td>
+<td>6</td>
+<td>5</td>
+<td>21111</td>
+<td>11112</td>
+<td>11112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚫⚫</td>
+<td>6</td>
+<td>6</td>
+<td>111111</td>
+<td>111111</td>
+<td>111111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚪⚪⚪</td>
+<td>7</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td>e14</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚪⚪⚫</td>
+<td>7</td>
+<td>1</td>
+<td>7</td>
+<td>7</td>
+<td>e67</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚪⚫⚪</td>
+<td>7</td>
+<td>1</td>
+<td>7</td>
+<td>7</td>
+<td>e57</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚪⚫⚫</td>
+<td>7</td>
+<td>2</td>
+<td>61</td>
+<td>16</td>
+<td>e516</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚫⚪⚪</td>
+<td>7</td>
+<td>1</td>
+<td>7</td>
+<td>7</td>
+<td>e47</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚫⚪⚫</td>
+<td>7</td>
+<td>2</td>
+<td>52</td>
+<td>25</td>
+<td>e425</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚫⚫⚪</td>
+<td>7</td>
+<td>2</td>
+<td>61</td>
+<td>16</td>
+<td>e416</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚫⚫⚫</td>
+<td>7</td>
+<td>3</td>
+<td>511</td>
+<td>115</td>
+<td>e4115</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚪⚪⚪</td>
+<td>7</td>
+<td>1</td>
+<td>7</td>
+<td>7</td>
+<td>e37</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚪⚪⚫</td>
+<td>7</td>
+<td>2</td>
+<td>43</td>
+<td>34</td>
+<td>e334</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚪⚫⚪</td>
+<td>7</td>
+<td>2</td>
+<td>52</td>
+<td>25</td>
+<td>e325</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚪⚫⚫</td>
+<td>7</td>
+<td>3</td>
+<td>421</td>
+<td>214</td>
+<td>e3214</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚫⚪⚪</td>
+<td>7</td>
+<td>2</td>
+<td>61</td>
+<td>16</td>
+<td>e316</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚫⚪⚫</td>
+<td>7</td>
+<td>3</td>
+<td>421</td>
+<td>124</td>
+<td>e3124</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚫⚫⚪</td>
+<td>7</td>
+<td>3</td>
+<td>511</td>
+<td>115</td>
+<td>e3115</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚫⚫⚫</td>
+<td>7</td>
+<td>4</td>
+<td>4111</td>
+<td>1114</td>
+<td>e31114</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚪⚪⚪</td>
+<td>7</td>
+<td>1</td>
+<td>7</td>
+<td>7</td>
+<td>e27</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚪⚪⚫</td>
+<td>7</td>
+<td>2</td>
+<td>43</td>
+<td>43</td>
+<td>e243</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚪⚫⚪</td>
+<td>7</td>
+<td>2</td>
+<td>43</td>
+<td>34</td>
+<td>e234</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚪⚫⚫</td>
+<td>7</td>
+<td>3</td>
+<td>331</td>
+<td>313</td>
+<td>e2313</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚫⚪⚪</td>
+<td>7</td>
+<td>2</td>
+<td>52</td>
+<td>25</td>
+<td>e225</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚫⚪⚫</td>
+<td>7</td>
+<td>3</td>
+<td>322</td>
+<td>223</td>
+<td>e2223</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚫⚫⚪</td>
+<td>7</td>
+<td>3</td>
+<td>421</td>
+<td>214</td>
+<td>e2214</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚫⚫⚫</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>2113</td>
+<td>e22113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚪⚪⚪</td>
+<td>7</td>
+<td>2</td>
+<td>61</td>
+<td>16</td>
+<td>e216</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚪⚪⚫</td>
+<td>7</td>
+<td>3</td>
+<td>331</td>
+<td>133</td>
+<td>e2133</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚪⚫⚪</td>
+<td>7</td>
+<td>3</td>
+<td>421</td>
+<td>124</td>
+<td>e2124</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚪⚫⚫</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>1213</td>
+<td>e21213</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚫⚪⚪</td>
+<td>7</td>
+<td>3</td>
+<td>511</td>
+<td>115</td>
+<td>e2115</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚫⚪⚫</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>1123</td>
+<td>e21123</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚫⚫⚪</td>
+<td>7</td>
+<td>4</td>
+<td>4111</td>
+<td>1114</td>
+<td>e21114</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚫⚫⚫</td>
+<td>7</td>
+<td>5</td>
+<td>31111</td>
+<td>11113</td>
+<td>e211113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚪⚪⚪</td>
+<td>7</td>
+<td>1</td>
+<td>7</td>
+<td>7</td>
+<td>e17</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚪⚪⚫</td>
+<td>7</td>
+<td>2</td>
+<td>52</td>
+<td>52</td>
+<td>e152</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚪⚫⚪</td>
+<td>7</td>
+<td>2</td>
+<td>43</td>
+<td>43</td>
+<td>e143</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚪⚫⚫</td>
+<td>7</td>
+<td>3</td>
+<td>421</td>
+<td>412</td>
+<td>e1412</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚫⚪⚪</td>
+<td>7</td>
+<td>2</td>
+<td>43</td>
+<td>34</td>
+<td>e134</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚫⚪⚫</td>
+<td>7</td>
+<td>3</td>
+<td>322</td>
+<td>322</td>
+<td>e1322</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚫⚫⚪</td>
+<td>7</td>
+<td>3</td>
+<td>331</td>
+<td>313</td>
+<td>e1313</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚫⚫⚫</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>3112</td>
+<td>e13112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚪⚪⚪</td>
+<td>7</td>
+<td>2</td>
+<td>52</td>
+<td>25</td>
+<td>e125</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚪⚪⚫</td>
+<td>7</td>
+<td>3</td>
+<td>322</td>
+<td>232</td>
+<td>e1232</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚪⚫⚪</td>
+<td>7</td>
+<td>3</td>
+<td>322</td>
+<td>223</td>
+<td>e1223</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚪⚫⚫</td>
+<td>7</td>
+<td>4</td>
+<td>2221</td>
+<td>2212</td>
+<td>e12212</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚫⚪⚪</td>
+<td>7</td>
+<td>3</td>
+<td>421</td>
+<td>214</td>
+<td>e1214</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚫⚪⚫</td>
+<td>7</td>
+<td>4</td>
+<td>2221</td>
+<td>2122</td>
+<td>e12122</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚫⚫⚪</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>2113</td>
+<td>e12113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚫⚫⚫</td>
+<td>7</td>
+<td>5</td>
+<td>22111</td>
+<td>21112</td>
+<td>e121112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚪⚪⚪</td>
+<td>7</td>
+<td>2</td>
+<td>61</td>
+<td>16</td>
+<td>e116</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚪⚪⚫</td>
+<td>7</td>
+<td>3</td>
+<td>421</td>
+<td>142</td>
+<td>e1142</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚪⚫⚪</td>
+<td>7</td>
+<td>3</td>
+<td>331</td>
+<td>133</td>
+<td>e1133</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚪⚫⚫</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>1312</td>
+<td>e11312</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚫⚪⚪</td>
+<td>7</td>
+<td>3</td>
+<td>421</td>
+<td>124</td>
+<td>e1124</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚫⚪⚫</td>
+<td>7</td>
+<td>4</td>
+<td>2221</td>
+<td>1222</td>
+<td>e11222</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚫⚫⚪</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>1213</td>
+<td>e11213</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚫⚫⚫</td>
+<td>7</td>
+<td>5</td>
+<td>22111</td>
+<td>12112</td>
+<td>e112112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚪⚪⚪</td>
+<td>7</td>
+<td>3</td>
+<td>511</td>
+<td>115</td>
+<td>e1115</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚪⚪⚫</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>1132</td>
+<td>e11132</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚪⚫⚪</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>1123</td>
+<td>e11123</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚪⚫⚫</td>
+<td>7</td>
+<td>5</td>
+<td>22111</td>
+<td>11212</td>
+<td>e111212</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚫⚪⚪</td>
+<td>7</td>
+<td>4</td>
+<td>4111</td>
+<td>1114</td>
+<td>e11114</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚫⚪⚫</td>
+<td>7</td>
+<td>5</td>
+<td>22111</td>
+<td>11122</td>
+<td>e111122</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚫⚫⚪</td>
+<td>7</td>
+<td>5</td>
+<td>31111</td>
+<td>11113</td>
+<td>e111113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚫⚫⚫</td>
+<td>7</td>
+<td>6</td>
+<td>211111</td>
+<td>111112</td>
+<td>e1111112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚪⚪⚪</td>
+<td>7</td>
+<td>1</td>
+<td>7</td>
+<td>7</td>
+<td>7</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚪⚪⚫</td>
+<td>7</td>
+<td>2</td>
+<td>61</td>
+<td>61</td>
+<td>61</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚪⚫⚪</td>
+<td>7</td>
+<td>2</td>
+<td>52</td>
+<td>52</td>
+<td>52</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚪⚫⚫</td>
+<td>7</td>
+<td>3</td>
+<td>511</td>
+<td>511</td>
+<td>511</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚫⚪⚪</td>
+<td>7</td>
+<td>2</td>
+<td>43</td>
+<td>43</td>
+<td>43</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚫⚪⚫</td>
+<td>7</td>
+<td>3</td>
+<td>421</td>
+<td>421</td>
+<td>421</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚫⚫⚪</td>
+<td>7</td>
+<td>3</td>
+<td>421</td>
+<td>412</td>
+<td>412</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚫⚫⚫</td>
+<td>7</td>
+<td>4</td>
+<td>4111</td>
+<td>4111</td>
+<td>4111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚪⚪⚪</td>
+<td>7</td>
+<td>2</td>
+<td>43</td>
+<td>34</td>
+<td>34</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚪⚪⚫</td>
+<td>7</td>
+<td>3</td>
+<td>331</td>
+<td>331</td>
+<td>331</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚪⚫⚪</td>
+<td>7</td>
+<td>3</td>
+<td>322</td>
+<td>322</td>
+<td>322</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚪⚫⚫</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>3211</td>
+<td>3211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚫⚪⚪</td>
+<td>7</td>
+<td>3</td>
+<td>331</td>
+<td>313</td>
+<td>313</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚫⚪⚫</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>3121</td>
+<td>3121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚫⚫⚪</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>3112</td>
+<td>3112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚫⚫⚫</td>
+<td>7</td>
+<td>5</td>
+<td>31111</td>
+<td>31111</td>
+<td>31111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚪⚪⚪</td>
+<td>7</td>
+<td>2</td>
+<td>52</td>
+<td>25</td>
+<td>25</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚪⚪⚫</td>
+<td>7</td>
+<td>3</td>
+<td>421</td>
+<td>241</td>
+<td>241</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚪⚫⚪</td>
+<td>7</td>
+<td>3</td>
+<td>322</td>
+<td>232</td>
+<td>232</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚪⚫⚫</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>2311</td>
+<td>2311</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚫⚪⚪</td>
+<td>7</td>
+<td>3</td>
+<td>322</td>
+<td>223</td>
+<td>223</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚫⚪⚫</td>
+<td>7</td>
+<td>4</td>
+<td>2221</td>
+<td>2221</td>
+<td>2221</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚫⚫⚪</td>
+<td>7</td>
+<td>4</td>
+<td>2221</td>
+<td>2212</td>
+<td>2212</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚫⚫⚫</td>
+<td>7</td>
+<td>5</td>
+<td>22111</td>
+<td>22111</td>
+<td>22111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚪⚪⚪</td>
+<td>7</td>
+<td>3</td>
+<td>421</td>
+<td>214</td>
+<td>214</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚪⚪⚫</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>2131</td>
+<td>2131</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚪⚫⚪</td>
+<td>7</td>
+<td>4</td>
+<td>2221</td>
+<td>2122</td>
+<td>2122</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚪⚫⚫</td>
+<td>7</td>
+<td>5</td>
+<td>22111</td>
+<td>21211</td>
+<td>21211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚫⚪⚪</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>2113</td>
+<td>2113</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚫⚪⚫</td>
+<td>7</td>
+<td>5</td>
+<td>22111</td>
+<td>21121</td>
+<td>21121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚫⚫⚪</td>
+<td>7</td>
+<td>5</td>
+<td>22111</td>
+<td>21112</td>
+<td>21112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚫⚫⚫</td>
+<td>7</td>
+<td>6</td>
+<td>211111</td>
+<td>211111</td>
+<td>211111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚪⚪⚪</td>
+<td>7</td>
+<td>2</td>
+<td>61</td>
+<td>16</td>
+<td>16</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚪⚪⚫</td>
+<td>7</td>
+<td>3</td>
+<td>511</td>
+<td>151</td>
+<td>151</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚪⚫⚪</td>
+<td>7</td>
+<td>3</td>
+<td>421</td>
+<td>142</td>
+<td>142</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚪⚫⚫</td>
+<td>7</td>
+<td>4</td>
+<td>4111</td>
+<td>1411</td>
+<td>1411</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚫⚪⚪</td>
+<td>7</td>
+<td>3</td>
+<td>331</td>
+<td>133</td>
+<td>133</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚫⚪⚫</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>1321</td>
+<td>1321</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚫⚫⚪</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>1312</td>
+<td>1312</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚫⚫⚫</td>
+<td>7</td>
+<td>5</td>
+<td>31111</td>
+<td>13111</td>
+<td>13111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚪⚪⚪</td>
+<td>7</td>
+<td>3</td>
+<td>421</td>
+<td>124</td>
+<td>124</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚪⚪⚫</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>1231</td>
+<td>1231</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚪⚫⚪</td>
+<td>7</td>
+<td>4</td>
+<td>2221</td>
+<td>1222</td>
+<td>1222</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚪⚫⚫</td>
+<td>7</td>
+<td>5</td>
+<td>22111</td>
+<td>12211</td>
+<td>12211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚫⚪⚪</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>1213</td>
+<td>1213</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚫⚪⚫</td>
+<td>7</td>
+<td>5</td>
+<td>22111</td>
+<td>12121</td>
+<td>12121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚫⚫⚪</td>
+<td>7</td>
+<td>5</td>
+<td>22111</td>
+<td>12112</td>
+<td>12112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚫⚫⚫</td>
+<td>7</td>
+<td>6</td>
+<td>211111</td>
+<td>121111</td>
+<td>121111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚪⚪⚪</td>
+<td>7</td>
+<td>3</td>
+<td>511</td>
+<td>115</td>
+<td>115</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚪⚪⚫</td>
+<td>7</td>
+<td>4</td>
+<td>4111</td>
+<td>1141</td>
+<td>1141</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚪⚫⚪</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>1132</td>
+<td>1132</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚪⚫⚫</td>
+<td>7</td>
+<td>5</td>
+<td>31111</td>
+<td>11311</td>
+<td>11311</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚫⚪⚪</td>
+<td>7</td>
+<td>4</td>
+<td>3211</td>
+<td>1123</td>
+<td>1123</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚫⚪⚫</td>
+<td>7</td>
+<td>5</td>
+<td>22111</td>
+<td>11221</td>
+<td>11221</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚫⚫⚪</td>
+<td>7</td>
+<td>5</td>
+<td>22111</td>
+<td>11212</td>
+<td>11212</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚫⚫⚫</td>
+<td>7</td>
+<td>6</td>
+<td>211111</td>
+<td>112111</td>
+<td>112111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚪⚪⚪</td>
+<td>7</td>
+<td>4</td>
+<td>4111</td>
+<td>1114</td>
+<td>1114</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚪⚪⚫</td>
+<td>7</td>
+<td>5</td>
+<td>31111</td>
+<td>11131</td>
+<td>11131</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚪⚫⚪</td>
+<td>7</td>
+<td>5</td>
+<td>22111</td>
+<td>11122</td>
+<td>11122</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚪⚫⚫</td>
+<td>7</td>
+<td>6</td>
+<td>211111</td>
+<td>111211</td>
+<td>111211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚫⚪⚪</td>
+<td>7</td>
+<td>5</td>
+<td>31111</td>
+<td>11113</td>
+<td>11113</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚫⚪⚫</td>
+<td>7</td>
+<td>6</td>
+<td>211111</td>
+<td>111121</td>
+<td>111121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚫⚫⚪</td>
+<td>7</td>
+<td>6</td>
+<td>211111</td>
+<td>111112</td>
+<td>111112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚫⚫⚫</td>
+<td>7</td>
+<td>7</td>
+<td>1111111</td>
+<td>1111111</td>
+<td>1111111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚪⚪⚪⚪</td>
+<td>8</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td>e16</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚪⚪⚪⚫</td>
+<td>8</td>
+<td>1</td>
+<td>8</td>
+<td>8</td>
+<td>e78</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚪⚪⚫⚪</td>
+<td>8</td>
+<td>1</td>
+<td>8</td>
+<td>8</td>
+<td>e68</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚪⚪⚫⚫</td>
+<td>8</td>
+<td>2</td>
+<td>71</td>
+<td>17</td>
+<td>e617</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚪⚫⚪⚪</td>
+<td>8</td>
+<td>1</td>
+<td>8</td>
+<td>8</td>
+<td>e58</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚪⚫⚪⚫</td>
+<td>8</td>
+<td>2</td>
+<td>62</td>
+<td>26</td>
+<td>e526</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚪⚫⚫⚪</td>
+<td>8</td>
+<td>2</td>
+<td>71</td>
+<td>17</td>
+<td>e517</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚪⚫⚫⚫</td>
+<td>8</td>
+<td>3</td>
+<td>611</td>
+<td>116</td>
+<td>e5116</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚫⚪⚪⚪</td>
+<td>8</td>
+<td>1</td>
+<td>8</td>
+<td>8</td>
+<td>e48</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚫⚪⚪⚫</td>
+<td>8</td>
+<td>2</td>
+<td>53</td>
+<td>35</td>
+<td>e435</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚫⚪⚫⚪</td>
+<td>8</td>
+<td>2</td>
+<td>62</td>
+<td>26</td>
+<td>e426</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚫⚪⚫⚫</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>215</td>
+<td>e4215</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚫⚫⚪⚪</td>
+<td>8</td>
+<td>2</td>
+<td>71</td>
+<td>17</td>
+<td>e417</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚫⚫⚪⚫</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>125</td>
+<td>e4125</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚫⚫⚫⚪</td>
+<td>8</td>
+<td>3</td>
+<td>611</td>
+<td>116</td>
+<td>e4116</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚪⚫⚫⚫⚫</td>
+<td>8</td>
+<td>4</td>
+<td>5111</td>
+<td>1115</td>
+<td>e41115</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚪⚪⚪⚪</td>
+<td>8</td>
+<td>1</td>
+<td>8</td>
+<td>8</td>
+<td>e38</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚪⚪⚪⚫</td>
+<td>8</td>
+<td>2</td>
+<td>44</td>
+<td>44</td>
+<td>e344</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚪⚪⚫⚪</td>
+<td>8</td>
+<td>2</td>
+<td>53</td>
+<td>35</td>
+<td>e335</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚪⚪⚫⚫</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>314</td>
+<td>e3314</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚪⚫⚪⚪</td>
+<td>8</td>
+<td>2</td>
+<td>62</td>
+<td>26</td>
+<td>e326</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚪⚫⚪⚫</td>
+<td>8</td>
+<td>3</td>
+<td>422</td>
+<td>224</td>
+<td>e3224</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚪⚫⚫⚪</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>215</td>
+<td>e3215</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚪⚫⚫⚫</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>2114</td>
+<td>e32114</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚫⚪⚪⚪</td>
+<td>8</td>
+<td>2</td>
+<td>71</td>
+<td>17</td>
+<td>e317</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚫⚪⚪⚫</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>134</td>
+<td>e3134</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚫⚪⚫⚪</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>125</td>
+<td>e3125</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚫⚪⚫⚫</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>1214</td>
+<td>e31214</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚫⚫⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>611</td>
+<td>116</td>
+<td>e3116</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚫⚫⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>1124</td>
+<td>e31124</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚫⚫⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>5111</td>
+<td>1115</td>
+<td>e31115</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚪⚫⚫⚫⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>41111</td>
+<td>11114</td>
+<td>e311114</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚪⚪⚪⚪</td>
+<td>8</td>
+<td>1</td>
+<td>8</td>
+<td>8</td>
+<td>e28</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚪⚪⚪⚫</td>
+<td>8</td>
+<td>2</td>
+<td>53</td>
+<td>53</td>
+<td>e253</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚪⚪⚫⚪</td>
+<td>8</td>
+<td>2</td>
+<td>44</td>
+<td>44</td>
+<td>e244</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚪⚪⚫⚫</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>413</td>
+<td>e2413</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚪⚫⚪⚪</td>
+<td>8</td>
+<td>2</td>
+<td>53</td>
+<td>35</td>
+<td>e235</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚪⚫⚪⚫</td>
+<td>8</td>
+<td>3</td>
+<td>332</td>
+<td>323</td>
+<td>e2323</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚪⚫⚫⚪</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>314</td>
+<td>e2314</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚪⚫⚫⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3311</td>
+<td>3113</td>
+<td>e23113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚫⚪⚪⚪</td>
+<td>8</td>
+<td>2</td>
+<td>62</td>
+<td>26</td>
+<td>e226</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚫⚪⚪⚫</td>
+<td>8</td>
+<td>3</td>
+<td>332</td>
+<td>233</td>
+<td>e2233</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚫⚪⚫⚪</td>
+<td>8</td>
+<td>3</td>
+<td>422</td>
+<td>224</td>
+<td>e2224</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚫⚪⚫⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>2213</td>
+<td>e22213</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚫⚫⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>215</td>
+<td>e2215</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚫⚫⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>2123</td>
+<td>e22123</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚫⚫⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>2114</td>
+<td>e22114</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚪⚫⚫⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>21113</td>
+<td>e221113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚪⚪⚪⚪</td>
+<td>8</td>
+<td>2</td>
+<td>71</td>
+<td>17</td>
+<td>e217</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚪⚪⚪⚫</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>143</td>
+<td>e2143</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚪⚪⚫⚪</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>134</td>
+<td>e2134</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚪⚪⚫⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3311</td>
+<td>1313</td>
+<td>e21313</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚪⚫⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>125</td>
+<td>e2125</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚪⚫⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>1223</td>
+<td>e21223</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚪⚫⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>1214</td>
+<td>e21214</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚪⚫⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>12113</td>
+<td>e212113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚫⚪⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>611</td>
+<td>116</td>
+<td>e2116</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚫⚪⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3311</td>
+<td>1133</td>
+<td>e21133</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚫⚪⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>1124</td>
+<td>e21124</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚫⚪⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>11213</td>
+<td>e211213</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚫⚫⚪⚪</td>
+<td>8</td>
+<td>4</td>
+<td>5111</td>
+<td>1115</td>
+<td>e21115</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚫⚫⚪⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>11123</td>
+<td>e211123</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚫⚫⚫⚪</td>
+<td>8</td>
+<td>5</td>
+<td>41111</td>
+<td>11114</td>
+<td>e211114</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚪⚫⚫⚫⚫⚫⚫</td>
+<td>8</td>
+<td>6</td>
+<td>311111</td>
+<td>111113</td>
+<td>e2111113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚪⚪⚪⚪</td>
+<td>8</td>
+<td>1</td>
+<td>8</td>
+<td>8</td>
+<td>e18</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚪⚪⚪⚫</td>
+<td>8</td>
+<td>2</td>
+<td>62</td>
+<td>62</td>
+<td>e162</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚪⚪⚫⚪</td>
+<td>8</td>
+<td>2</td>
+<td>53</td>
+<td>53</td>
+<td>e153</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚪⚪⚫⚫</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>512</td>
+<td>e1512</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚪⚫⚪⚪</td>
+<td>8</td>
+<td>2</td>
+<td>44</td>
+<td>44</td>
+<td>e144</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚪⚫⚪⚫</td>
+<td>8</td>
+<td>3</td>
+<td>422</td>
+<td>422</td>
+<td>e1422</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚪⚫⚫⚪</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>413</td>
+<td>e1413</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚪⚫⚫⚫</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>4112</td>
+<td>e14112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚫⚪⚪⚪</td>
+<td>8</td>
+<td>2</td>
+<td>53</td>
+<td>35</td>
+<td>e135</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚫⚪⚪⚫</td>
+<td>8</td>
+<td>3</td>
+<td>332</td>
+<td>332</td>
+<td>e1332</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚫⚪⚫⚪</td>
+<td>8</td>
+<td>3</td>
+<td>332</td>
+<td>323</td>
+<td>e1323</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚫⚪⚫⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>3212</td>
+<td>e13212</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚫⚫⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>314</td>
+<td>e1314</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚫⚫⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>3122</td>
+<td>e13122</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚫⚫⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3311</td>
+<td>3113</td>
+<td>e13113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚪⚫⚫⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>31112</td>
+<td>e131112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚪⚪⚪⚪</td>
+<td>8</td>
+<td>2</td>
+<td>62</td>
+<td>26</td>
+<td>e126</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚪⚪⚪⚫</td>
+<td>8</td>
+<td>3</td>
+<td>422</td>
+<td>242</td>
+<td>e1242</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚪⚪⚫⚪</td>
+<td>8</td>
+<td>3</td>
+<td>332</td>
+<td>233</td>
+<td>e1233</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚪⚪⚫⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>2312</td>
+<td>e12312</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚪⚫⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>422</td>
+<td>224</td>
+<td>e1224</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚪⚫⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>2222</td>
+<td>2222</td>
+<td>e12222</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚪⚫⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>2213</td>
+<td>e12213</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚪⚫⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>22112</td>
+<td>e122112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚫⚪⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>215</td>
+<td>e1215</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚫⚪⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>2132</td>
+<td>e12132</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚫⚪⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>2123</td>
+<td>e12123</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚫⚪⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>21212</td>
+<td>e121212</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚫⚫⚪⚪</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>2114</td>
+<td>e12114</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚫⚫⚪⚫</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>21122</td>
+<td>e121122</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚫⚫⚫⚪</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>21113</td>
+<td>e121113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚪⚫⚫⚫⚫⚫</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>211112</td>
+<td>e1211112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚪⚪⚪⚪</td>
+<td>8</td>
+<td>2</td>
+<td>71</td>
+<td>17</td>
+<td>e117</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚪⚪⚪⚫</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>152</td>
+<td>e1152</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚪⚪⚫⚪</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>143</td>
+<td>e1143</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚪⚪⚫⚫</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>1412</td>
+<td>e11412</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚪⚫⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>134</td>
+<td>e1134</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚪⚫⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>1322</td>
+<td>e11322</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚪⚫⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3311</td>
+<td>1313</td>
+<td>e11313</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚪⚫⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>13112</td>
+<td>e113112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚫⚪⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>125</td>
+<td>e1125</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚫⚪⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>1232</td>
+<td>e11232</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚫⚪⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>1223</td>
+<td>e11223</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚫⚪⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>12212</td>
+<td>e112212</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚫⚫⚪⚪</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>1214</td>
+<td>e11214</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚫⚫⚪⚫</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>12122</td>
+<td>e112122</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚫⚫⚫⚪</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>12113</td>
+<td>e112113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚪⚫⚫⚫⚫</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>121112</td>
+<td>e1121112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚪⚪⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>611</td>
+<td>116</td>
+<td>e1116</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚪⚪⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>1142</td>
+<td>e11142</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚪⚪⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3311</td>
+<td>1133</td>
+<td>e11133</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚪⚪⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>11312</td>
+<td>e111312</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚪⚫⚪⚪</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>1124</td>
+<td>e11124</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚪⚫⚪⚫</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>11222</td>
+<td>e111222</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚪⚫⚫⚪</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>11213</td>
+<td>e111213</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚪⚫⚫⚫</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>112112</td>
+<td>e1112112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚫⚪⚪⚪</td>
+<td>8</td>
+<td>4</td>
+<td>5111</td>
+<td>1115</td>
+<td>e11115</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚫⚪⚪⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>11132</td>
+<td>e111132</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚫⚪⚫⚪</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>11123</td>
+<td>e111123</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚫⚪⚫⚫</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>111212</td>
+<td>e1111212</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚫⚫⚪⚪</td>
+<td>8</td>
+<td>5</td>
+<td>41111</td>
+<td>11114</td>
+<td>e111114</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚫⚫⚪⚫</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>111122</td>
+<td>e1111122</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚫⚫⚫⚪</td>
+<td>8</td>
+<td>6</td>
+<td>311111</td>
+<td>111113</td>
+<td>e1111113</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚪⚫⚫⚫⚫⚫⚫⚫</td>
+<td>8</td>
+<td>7</td>
+<td>2111111</td>
+<td>1111112</td>
+<td>e11111112</td>
+<td>Syncopated</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚪⚪⚪⚪</td>
+<td>8</td>
+<td>1</td>
+<td>8</td>
+<td>8</td>
+<td>8</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚪⚪⚪⚫</td>
+<td>8</td>
+<td>2</td>
+<td>71</td>
+<td>71</td>
+<td>71</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚪⚪⚫⚪</td>
+<td>8</td>
+<td>2</td>
+<td>62</td>
+<td>62</td>
+<td>62</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚪⚪⚫⚫</td>
+<td>8</td>
+<td>3</td>
+<td>611</td>
+<td>611</td>
+<td>611</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚪⚫⚪⚪</td>
+<td>8</td>
+<td>2</td>
+<td>53</td>
+<td>53</td>
+<td>53</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚪⚫⚪⚫</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>521</td>
+<td>521</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚪⚫⚫⚪</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>512</td>
+<td>512</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚪⚫⚫⚫</td>
+<td>8</td>
+<td>4</td>
+<td>5111</td>
+<td>5111</td>
+<td>5111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚫⚪⚪⚪</td>
+<td>8</td>
+<td>2</td>
+<td>44</td>
+<td>44</td>
+<td>44</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚫⚪⚪⚫</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>431</td>
+<td>431</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚫⚪⚫⚪</td>
+<td>8</td>
+<td>3</td>
+<td>422</td>
+<td>422</td>
+<td>422</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚫⚪⚫⚫</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>4211</td>
+<td>4211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚫⚫⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>413</td>
+<td>413</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚫⚫⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>4121</td>
+<td>4121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚫⚫⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>4112</td>
+<td>4112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚪⚫⚫⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>41111</td>
+<td>41111</td>
+<td>41111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚪⚪⚪⚪</td>
+<td>8</td>
+<td>2</td>
+<td>53</td>
+<td>35</td>
+<td>35</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚪⚪⚪⚫</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>341</td>
+<td>341</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚪⚪⚫⚪</td>
+<td>8</td>
+<td>3</td>
+<td>332</td>
+<td>332</td>
+<td>332</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚪⚪⚫⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3311</td>
+<td>3311</td>
+<td>3311</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚪⚫⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>332</td>
+<td>323</td>
+<td>323</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚪⚫⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>3221</td>
+<td>3221</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚪⚫⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>3212</td>
+<td>3212</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚪⚫⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>32111</td>
+<td>32111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚫⚪⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>314</td>
+<td>314</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚫⚪⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3311</td>
+<td>3131</td>
+<td>3131</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚫⚪⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>3122</td>
+<td>3122</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚫⚪⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>31211</td>
+<td>31211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚫⚫⚪⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3311</td>
+<td>3113</td>
+<td>3113</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚫⚫⚪⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>31121</td>
+<td>31121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚫⚫⚫⚪</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>31112</td>
+<td>31112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚪⚫⚫⚫⚫⚫</td>
+<td>8</td>
+<td>6</td>
+<td>311111</td>
+<td>311111</td>
+<td>311111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚪⚪⚪⚪</td>
+<td>8</td>
+<td>2</td>
+<td>62</td>
+<td>26</td>
+<td>26</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚪⚪⚪⚫</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>251</td>
+<td>251</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚪⚪⚫⚪</td>
+<td>8</td>
+<td>3</td>
+<td>422</td>
+<td>242</td>
+<td>242</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚪⚪⚫⚫</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>2411</td>
+<td>2411</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚪⚫⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>332</td>
+<td>233</td>
+<td>233</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚪⚫⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>2321</td>
+<td>2321</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚪⚫⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>2312</td>
+<td>2312</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚪⚫⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>23111</td>
+<td>23111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚫⚪⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>422</td>
+<td>224</td>
+<td>224</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚫⚪⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>2231</td>
+<td>2231</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚫⚪⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>2222</td>
+<td>2222</td>
+<td>2222</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚫⚪⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>22211</td>
+<td>22211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚫⚫⚪⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>2213</td>
+<td>2213</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚫⚫⚪⚫</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>22121</td>
+<td>22121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚫⚫⚫⚪</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>22112</td>
+<td>22112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚪⚫⚫⚫⚫</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>221111</td>
+<td>221111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚪⚪⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>215</td>
+<td>215</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚪⚪⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>2141</td>
+<td>2141</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚪⚪⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>2132</td>
+<td>2132</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚪⚪⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>21311</td>
+<td>21311</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚪⚫⚪⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>2123</td>
+<td>2123</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚪⚫⚪⚫</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>21221</td>
+<td>21221</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚪⚫⚫⚪</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>21212</td>
+<td>21212</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚪⚫⚫⚫</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>212111</td>
+<td>212111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚫⚪⚪⚪</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>2114</td>
+<td>2114</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚫⚪⚪⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>21131</td>
+<td>21131</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚫⚪⚫⚪</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>21122</td>
+<td>21122</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚫⚪⚫⚫</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>211211</td>
+<td>211211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚫⚫⚪⚪</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>21113</td>
+<td>21113</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚫⚫⚪⚫</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>211121</td>
+<td>211121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚫⚫⚫⚪</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>211112</td>
+<td>211112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚪⚫⚫⚫⚫⚫⚫</td>
+<td>8</td>
+<td>7</td>
+<td>2111111</td>
+<td>2111111</td>
+<td>2111111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚪⚪⚪⚪</td>
+<td>8</td>
+<td>2</td>
+<td>71</td>
+<td>17</td>
+<td>17</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚪⚪⚪⚫</td>
+<td>8</td>
+<td>3</td>
+<td>611</td>
+<td>161</td>
+<td>161</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚪⚪⚫⚪</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>152</td>
+<td>152</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚪⚪⚫⚫</td>
+<td>8</td>
+<td>4</td>
+<td>5111</td>
+<td>1511</td>
+<td>1511</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚪⚫⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>143</td>
+<td>143</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚪⚫⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>1421</td>
+<td>1421</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚪⚫⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>1412</td>
+<td>1412</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚪⚫⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>41111</td>
+<td>14111</td>
+<td>14111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚫⚪⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>431</td>
+<td>134</td>
+<td>134</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚫⚪⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>3311</td>
+<td>1331</td>
+<td>1331</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚫⚪⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>1322</td>
+<td>1322</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚫⚪⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>13211</td>
+<td>13211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚫⚫⚪⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3311</td>
+<td>1313</td>
+<td>1313</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚫⚫⚪⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>13121</td>
+<td>13121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚫⚫⚫⚪</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>13112</td>
+<td>13112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚪⚫⚫⚫⚫</td>
+<td>8</td>
+<td>6</td>
+<td>311111</td>
+<td>131111</td>
+<td>131111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚪⚪⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>521</td>
+<td>125</td>
+<td>125</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚪⚪⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>1241</td>
+<td>1241</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚪⚪⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>1232</td>
+<td>1232</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚪⚪⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>12311</td>
+<td>12311</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚪⚫⚪⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3221</td>
+<td>1223</td>
+<td>1223</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚪⚫⚪⚫</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>12221</td>
+<td>12221</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚪⚫⚫⚪</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>12212</td>
+<td>12212</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚪⚫⚫⚫</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>122111</td>
+<td>122111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚫⚪⚪⚪</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>1214</td>
+<td>1214</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚫⚪⚪⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>12131</td>
+<td>12131</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚫⚪⚫⚪</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>12122</td>
+<td>12122</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚫⚪⚫⚫</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>121211</td>
+<td>121211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚫⚫⚪⚪</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>12113</td>
+<td>12113</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚫⚫⚪⚫</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>121121</td>
+<td>121121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚫⚫⚫⚪</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>121112</td>
+<td>121112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚪⚫⚫⚫⚫⚫</td>
+<td>8</td>
+<td>7</td>
+<td>2111111</td>
+<td>1211111</td>
+<td>1211111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚪⚪⚪⚪</td>
+<td>8</td>
+<td>3</td>
+<td>611</td>
+<td>116</td>
+<td>116</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚪⚪⚪⚫</td>
+<td>8</td>
+<td>4</td>
+<td>5111</td>
+<td>1151</td>
+<td>1151</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚪⚪⚫⚪</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>1142</td>
+<td>1142</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚪⚪⚫⚫</td>
+<td>8</td>
+<td>5</td>
+<td>41111</td>
+<td>11411</td>
+<td>11411</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚪⚫⚪⚪</td>
+<td>8</td>
+<td>4</td>
+<td>3311</td>
+<td>1133</td>
+<td>1133</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚪⚫⚪⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>11321</td>
+<td>11321</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚪⚫⚫⚪</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>11312</td>
+<td>11312</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚪⚫⚫⚫</td>
+<td>8</td>
+<td>6</td>
+<td>311111</td>
+<td>113111</td>
+<td>113111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚫⚪⚪⚪</td>
+<td>8</td>
+<td>4</td>
+<td>4211</td>
+<td>1124</td>
+<td>1124</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚫⚪⚪⚫</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>11231</td>
+<td>11231</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚫⚪⚫⚪</td>
+<td>8</td>
+<td>5</td>
+<td>22211</td>
+<td>11222</td>
+<td>11222</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚫⚪⚫⚫</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>112211</td>
+<td>112211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚫⚫⚪⚪</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>11213</td>
+<td>11213</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚫⚫⚪⚫</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>112121</td>
+<td>112121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚫⚫⚫⚪</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>112112</td>
+<td>112112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚪⚫⚫⚫⚫</td>
+<td>8</td>
+<td>7</td>
+<td>2111111</td>
+<td>1121111</td>
+<td>1121111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚪⚪⚪⚪</td>
+<td>8</td>
+<td>4</td>
+<td>5111</td>
+<td>1115</td>
+<td>1115</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚪⚪⚪⚫</td>
+<td>8</td>
+<td>5</td>
+<td>41111</td>
+<td>11141</td>
+<td>11141</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚪⚪⚫⚪</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>11132</td>
+<td>11132</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚪⚪⚫⚫</td>
+<td>8</td>
+<td>6</td>
+<td>311111</td>
+<td>111311</td>
+<td>111311</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚪⚫⚪⚪</td>
+<td>8</td>
+<td>5</td>
+<td>32111</td>
+<td>11123</td>
+<td>11123</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚪⚫⚪⚫</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>111221</td>
+<td>111221</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚪⚫⚫⚪</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>111212</td>
+<td>111212</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚪⚫⚫⚫</td>
+<td>8</td>
+<td>7</td>
+<td>2111111</td>
+<td>1112111</td>
+<td>1112111</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚫⚪⚪⚪</td>
+<td>8</td>
+<td>5</td>
+<td>41111</td>
+<td>11114</td>
+<td>11114</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚫⚪⚪⚫</td>
+<td>8</td>
+<td>6</td>
+<td>311111</td>
+<td>111131</td>
+<td>111131</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚫⚪⚫⚪</td>
+<td>8</td>
+<td>6</td>
+<td>221111</td>
+<td>111122</td>
+<td>111122</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚫⚪⚫⚫</td>
+<td>8</td>
+<td>7</td>
+<td>2111111</td>
+<td>1111211</td>
+<td>1111211</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚫⚫⚪⚪</td>
+<td>8</td>
+<td>6</td>
+<td>311111</td>
+<td>111113</td>
+<td>111113</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚫⚫⚪⚫</td>
+<td>8</td>
+<td>7</td>
+<td>2111111</td>
+<td>1111121</td>
+<td>1111121</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚫⚫⚫⚪</td>
+<td>8</td>
+<td>7</td>
+<td>2111111</td>
+<td>1111112</td>
+<td>1111112</td>
+<td>Downbeat</td>
+  </tr> 
+<tr>
+<td>⚫⚫⚫⚫⚫⚫⚫⚫</td>
+<td>8</td>
+<td>8</td>
+<td>11111111</td>
+<td>11111111</td>
+<td>11111111</td>
+<td>Downbeat</td>
+  </tr>
+        
+        
+    </tbody>
+</table>
+
+
+
+<script src="tablefilter/tablefilter.js"></script>
+
+<script data-config>
+    var tfConfig = {
+        base_path: 'tablefilter/',
+
+                    auto_filter: {
+            delay: 0 //milliseconds
+        },
+        // filter types
+
+        col_1: "checklist",
+        col_2: "checklist",
+col_3: "checklist",
+
+        col_6: "checklist",
+        
+        
+        
+        
+        
+
+        // column types
+        col_types: [
+            'string', 'string', 'string',
+            'string', 'number', 'number',
+            'number', 'number', 'number'
+        ],
+
+        // filters and headers position
+        filters_row_index: 2,
+        headers_row_index: 1,
+                        sticky_headers: true,
+        state: { types: ['local_storage']},
+        popup_filters: false,
+
+        alternate_rows: true,
+        rows_counter: true,
+        btn_reset: true,
+        status_bar: true,
+        ignore_diacritics: true,
+        no_results_message: true,
+        enable_empty_option: false,
+        enable_non_empty_option: false,
+        loader: false,
+        mark_active_columns: false,
+        highlight_keywords: false,
+        
+         // theme
+        themes: [{ name: '' }],
+        
+
+        // sorting extension
+        extensions: [{ name: 'sort' }]
+    };
+    var tf = new TableFilter('grouped-headers', tfConfig, 2);
+    tf.init();
+</script>
+<script>
+window.setTimeout(function (){
+ return document.body.classList.remove('fade-out');
+}, 0);
+
+</script>
+<hr>
+
+  </body>
+
+</html>
