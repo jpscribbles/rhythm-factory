@@ -1,0 +1,15 @@
+{
+  "background_color": "purple",
+  "description": "PWA",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "icon/fox-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "PWA NAME",
+  "short_name": "PWA NAME",
+  "start_url": "index.html"
+}
