@@ -1,15 +1,15 @@
 {
   "background_color": "purple",
-  "description": "PWA",
+  "description": "RHYTHM FACTORY",
   "display": "fullscreen",
   "icons": [
     {
-      "src": "icon/fox-icon.png",
+      "src": "icon/drum-icon.png",
       "sizes": "192x192",
       "type": "image/png"
     }
   ],
-  "name": "PWA NAME",
-  "short_name": "PWA NAME",
+  "name": "RHYTHM FACTORY",
+  "short_name": "RF",
   "start_url": "index.html"
 }
