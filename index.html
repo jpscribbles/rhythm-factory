@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- CODELAB: Add link rel manifest -->
-<link rel="manifest" href="/manifest.json">
-  
+
   <!-- CODELAB: Add description here -->
-<meta name="description" content="A catalog of rhythms app">
-  
-  <!-- CODELAB: Add meta theme-color -->
-<meta name="theme-color" content="#2F3BA2" />
-  
+<meta name="description" content="A rhythm catalog app">
+
+    <link href="style.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+    <link rel="manifest" href="manifest.webmanifest">
   
     <title>Rhythm Factory</title>
 
@@ -4745,15 +4743,7 @@ window.setTimeout(function (){
 </script>
 <hr>
 
-    
-        <script>
-      if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-          .then(function() {
-                console.log('Service Worker Registered');
-          });
-      }
-    </script>
+   
     
   </body>
 
