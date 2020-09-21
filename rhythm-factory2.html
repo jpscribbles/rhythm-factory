@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+	    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+  <!-- CODELAB: Add description here -->
+<meta name="description" content="A rhythm catalog app">
+
+    <link href="style.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+    <link rel="manifest" href="manifest.webmanifest">
+  
+    <title>Rhythm Factory</title>
+	
+  </head>
+  <body>
+  
+  <style>
+  html { 
+    overflow-y: scroll;
+  }
+
+
+  body {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+  body {
+    opacity: 1;
+height:1000px;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+	  
+	   @font-face {
+      font-family: "muse";
+      src: url("Rhyth.otf");
+    }
+  
+  
+  .muse {
+    font-size: 30px;
+    font-family: "muse"
+  }
+
+tr.brk { 
+  break-after: page; 
+} 
+</style>
+
+<script>document.body.className += 'fade-out';</script>
+
+    
+<div id="stamp"></div>
+
+<script>
+
+
+
+
+
+  function brush(){
+
+    let stamp = document.getElementById("stamp")
+
+//CORE 
+
+    //necklace generator
+    function makeNecklace(n, k) {
+      var necklaces = [],
+          a = [],
+          i = -1,
+          j;
+      while (++i < n) a[i] = 0;
+      necklaces.push(a.slice());
+      while (1) {
+        i = n;
+        while (--i >= 0) if (a[i] < k - 1) break;
+        if (i < 0) break;
+        a[j = i++]++;
+        while (++j < n) a[j] = a[j % i];
+        if (n % i === 0) necklaces.push(a.slice());
+      }
+      return necklaces;
+    }
+
+
+    //remove duplicates
+    function removeDuplicate(n) {
+      let clean = []
+
+      for (let i = 0; i < n.length; i++) {
+        if (!clean.includes(n[i])) {
+          clean.push(n[i])
+        }
+      }
+
+      return clean
+
+    }
+
+    //rotate sequences,requires removeDuplicate
+    function rotateSeq(n) {
+      let num = []
+
+      for (let i = 0; i < n.length; i++) {
+        num.push(n)
+        n += n[0]
+        n = n.slice(1)
+      }
+      console.log()
+      return removeDuplicate(num)
+    }
+
+
+
+
+//PAINT 
+
+
+    //pulse counter
+    function countPulse(n){
+
+      return n.length
+    }
+
+
+    //beat counter
+    function countBeat(n){
+
+      let bag = []
+      for (let j = 0; j < n.length; j++) {
+        if (n[j] == 1) {
+          bag.push(1)
+        }
+      }
+
+      return bag.length
+    }
+
+
+    //starting point: downbeat or syncopation
+    function findDownbeat(n){
+
+      if (n[0] == 1) {
+        return "D"
+      }
+      else if (n[0] == 0) {
+        return "S"
+      }
+    }
+
+
+
+
+
+    //rhythm illustration
+    function paintCore(n){
+
+      return n
+        .replace(/0/g, `⚪`)
+        .replace(/1/g, `⚫`) 
+    }
+
+
+    function paintInverse(n){
+
+      return n
+        .replace(/0/g, `o`)
+        .replace(/1/g, `0`)
+        .replace(/o/g, `1`)	
+        .replace(/0/g, `⚪`)
+        .replace(/1/g, `⚫`)
+
+    }
+
+
+    //reflection or mirror
+    function paintMirror(n){
+
+      return n
+        .split("")
+        .reverse()
+        .join("")
+        .replace(/0/g, `⚪`)
+        .replace(/1/g, `⚫`) 
+    }
+
+
+    //reflection or mirror
+    function paintMirrorInverse(n){
+
+      return n
+        .split("")
+        .reverse()
+        .join("")
+        .replace(/0/g, `o`)
+        .replace(/1/g, `0`)
+        .replace(/o/g, `1`)	
+        .replace(/0/g, `⚪`)
+        .replace(/1/g, `⚫`) 
+    }
+
+
+    //musical notes
+    let note = [
+"s","e","e.","q",
+"q-s","q.","q-e.","h",
+"h-s","h,","h-e.","h.",
+"h.-s","h-q.","h.-e","w"
+]
+
+    let rest = [
+"S","E","E.","Q",
+"Q_S","Q.","Q_E.","H",
+"H_S","H,","H_E.","H.",
+"H._S","H_Q.","H._E","W"
+]
+
+    function musicNotes(arr) {
+
+
+      for (let varCount = count; 0 < varCount; varCount--) {
+        arr = arr.map(a => a
+                      .replace(new RegExp(`1${"0".repeat(varCount - 1)}`, "g"), note[varCount - 1]))
+
+      }
+
+      //why does starting on 7 in regex fail
+      for (let varCount = count; 0 < varCount; varCount--) {
+        arr = arr.map(a => a
+                      .replace(new RegExp(`${"0".repeat(varCount)}`, "g"), rest[varCount - 1]))
+
+      }
+
+      return arr
+
+
+    }
+
+
+//BOOLEAN
+
+    //binary palindrome or the same forwards as backwards
+    function isPalindrome(n){
+
+      return n == n
+        .split("")
+        .reverse()
+        .join("")
+    }
+
+   function isReducable(arr, arr2){
+
+      return arr.map((a,i) => a != arr2[i])
+
+    }
+
+    function isBreakable(arr){
+
+      return arr.map((a,i) => a.length > 0)
+
+    }
+
+    function isSelfInverse(arr) {
+
+      return arr.map(function (a) {
+        let len = a.length / 2
+
+        return a.length % 2 == 0
+          ? a.slice(0, len) == a.slice(len)
+          .replace(/0/g, `o`)
+          .replace(/1/g, `0`)
+          .replace(/o/g, `1`)
+        : false
+      })
+
+    }
+    
+    function isSelfMirrorInverse(arr) {
+
+  return arr.map(function (a) {
+    let len = a.length / 2
+
+    return a.length % 2 == 0
+      ? a.slice(0, len) == a.slice(len)
+        .replace(/0/g, `o`)
+        .replace(/1/g, `0`)
+        .replace(/o/g, `1`)
+        .split("")
+        .reverse()
+        .join("")
+      : false
+  })
+
+}
+
+ 
+
+function isEuclidRhythm(arr, euc) {
+
+      for (let j = 0; j < euc.length; j++) {
+
+        if (arr.includes(true)) {
+
+        }
+
+        else {
+          arr = arr.map(a =>
+                        a == euc[j]
+                        ? a = true
+                        : a
+                       )
+
+        }
+      }
+
+      for (let j = 0; j < euc.length; j++) {
+
+        if (arr.includes(false)) {
+
+        }
+
+        else{
+          arr = arr.map(a =>
+                        a !== true //used strict here
+                        ? a = false
+                        : a
+                       )
+        }
+
+      }
+
+
+      return arr
+
+    }
+
+
+
+    function isEuclidNecklace(arr) {
+
+      if (arr.includes(true)) {
+
+        arr = arr.map(a => a = true)
+      }
+
+      return arr
+
+    }
+
+
+
+   function isEuclidStr(arr, arr2) {
+
+      for (let j = 0; j < arr.length; j++) {
+        let bag;
+        bag = arr[j].split("")
+        bag[bag.length - 1] = +bag[bag.length - 1] - 1
+        bag[0] = +bag[0] + 1
+        arr[j] = bag.join("")
+
+        arr2.includes(arr[j])
+          ? arr[j] = true
+        : arr[j] = false
+      }
+
+      return arr
+
+    }
+
+
+    function isRevEuclidStr(arr, arr2) {
+
+      for (let j = 0; j < arr.length; j++) {
+        let bag;
+        bag = arr[j].split("")
+        bag[bag.length - 1] = +bag[bag.length - 1] + 1
+        bag[0] = +bag[0] - 1
+        arr[j] = bag.join("")
+
+        arr2.includes(arr[j])
+          ? arr[j] = true
+        : arr[j] = false
+      }
+
+      return arr
+
+    }
+
+
+//EUCLIDEAN RHYTHMS
+
+  //for euclidean rhythms, makes different binary groupings
+    function binarySeq(n) {
+
+      let str = []
+
+      for (let j = 1; j <= n; j++) {
+
+        for (let i = 0, o = j; i <= j; i++ , o--) {
+          str
+            .push(
+            ("1".repeat(i) + "0".repeat(o))
+            .split("")
+          )
+        }
+
+      }
+      return str
+    }
+
+
+
+    function makeEuclid(n, limit) {
+
+      //base case
+      if (n.length <= limit
+         ) {
+        return n.join("")
+      }
+
+      else {
+
+        //formatting
+        let as = n
+        .sort((a, b) => b - a)
+        .map(a => "" + a)
+
+        //find index of difference
+        let nd = 0
+        for (let i = 0; i < as.length; i++) {
+
+          if (as[i] != as[i + 1]) {
+            nd = i + 1
+            break
+          }
+        }
+        //create arrays
+        let ones = as
+        .slice(0, nd)
+
+        let zeros = as
+        .slice(nd)
+
+        //length of loop
+        let len = 0
+        ones.length > zeros.length
+          ? len = ones.length
+        : len = zeros.length
+
+        //new array balanced
+        let go = []
+        for (let i = 0; i < len; i++) {
+
+          go[i] = ones[i] + zeros[i]
+          go[i] = go[i].replace(/undefined/g, "")
+        }
+
+        //stops arrays such 111 from overflowing
+        return n.join("") == go.join("") 
+          ? go.join("")
+        : makeEuclid(go, limit)
+      }
+
+
+
+    }
+
+
+
+
+
+
+//BREAKABLES
+//needs list factor
+    function makeBreakable(arr, arr2) {
+
+      let pulse = arr2[0]
+
+      return arr.map(function (a) {
+        let ftr = listFactor(pulse)
+        let final = []
+
+a = a.split(",")//needed from the addition of commas
+
+        for (let j = 0; j < ftr.length; j++) {
+          let truth = []
+          let ct = 0
+          let num = pulse / ftr[j]
+
+          for (let i = 0; i < a.length; i++) {
+            ct += +a[i]
+
+            if (ct == num && ct != pulse) {
+              ct = 0
+              truth.push(true)
+            }
+
+          }
+
+          if (truth.length == ftr[j]) {
+            final.push(num)
+          }
+
+        }
+
+        return final.join(":")
+      })
+
+    }
+    
+
+
+
+//REDUCABLES
+
+    //factor finder
+    function listFactor(n) {
+      let num = []
+      for (let i = 0; i <= n; i++) {
+        if (n % i == 0) {
+          num.push(i)
+        }
+      }
+      return num
+    }
+
+
+
+    //greatest common factor, needs factor function, this one runs faster than gcf
+    function findGCF2(n) {
+      n.sort((a, b) => a - b)//smallest number first
+
+      let arr = []
+      for (let i = 0; i < n.length; i++) {
+        arr.push(
+          listFactor(n[i])
+          .sort((a, b) => b - a)//largest number first
+        )
+      }
+
+
+      let tester;
+      for (let j = 0; j < arr[0].length; j++) {
+        let tester = []
+
+        for (let i = 0; i < arr.length; i++) {
+
+          if (arr[i].includes(arr[0][j])) {
+            tester.push(arr[0][j])
+          }
+
+        }
+
+        if (tester.length == arr.length) {
+          return tester[0]
+        }
+
+      }
+
+      return "none"
+
+    }
+
+//reduces rhythms to their lowest common denominator
+function makeReducable(one, zero) {
+if (one == 0) return one
+
+
+  let crack = (zero + "," + one)
+    .split(",")
+    .filter(a => Number.isInteger(+a) && +a !== 0)
+    .map(a => +a)
+
+  let great = findGCF2(crack)
+
+  return +zero !== 0
+    ? `s${zero / great}e` + one
+      .split(",")
+      .map(a => +a / great)
+      .join(",")
+    : one
+      .split(",")
+      .map(a => +a / great)
+      .join(",")
+}
+
+
+ 
+
+    function reduceSeq(arr, arr2){
+
+      return arr.map((a,i) => arr2[i] == false 
+                     
+                     ? "" 
+                     : a )
+
+    }
+
+
+
+//FAMILY TREE
+
+function groupOne(arr) {
+
+  arr = arr.map(a => a
+    .split("")
+    .slice(a.indexOf("1"))
+    .join("")
+    .replace(/1/g, "x")
+    .replace(/0/g, "o")
+  )
+
+  for (let varCount = count; 0 < varCount; varCount--) {
+    arr = arr.map(function (a) {
+
+      return a
+        .replace(new RegExp(`x${"o".repeat(varCount - 1)}`, "g"),
+          `${varCount},`)
+    }
+    )
+
+  }
+
+  return arr
+    .map(function (a) {
+      return a[a.length - 1] == ","
+        ? a
+          .slice(0, a.length - 1)
+          .replace(/o/g, "0")
+        : a
+          .replace(/o/g, "0")
+    })
+
+
+}
+
+
+
+
+
+function groupZero(arr) {
+
+  arr = arr.map(a => (a + "1")//needed for zero superscript
+    .split("")
+    .slice(0, a.indexOf("1"))
+    .join("")
+    .replace(/1/g, "x")//should be no "x"
+    .replace(/0/g, "o")
+  )
+
+  for (let varCount = count; 0 < varCount; varCount--) {
+    arr = arr.map(function (a) {
+
+      return a
+        .replace(new RegExp(`${"o".repeat(varCount)}`, "g"),
+          `${varCount}`)
+    }
+    )
+  }
+
+
+
+  return arr.map(function (a) {
+    return a[a.length - 1] == ","
+      ? a
+        .slice(0, a.length - 1)
+        .replace(/o/g, "0")
+      : a
+        .replace(/o/g, "0")
+  })
+
+}
+
+
+//composition groups
+function groupCompSet(arr, zero) {
+  return arr.map(function (a, i) {
+    let num = a.split("")
+
+    a == 0
+      ? num[num.length - 1] = 0 //can remove conditional if 4^4 is needed instead of 4^0
+      : num[num.length - 1] = +num[num.length - 1] + +zero[i]
+
+    return num.join("")
+  }
+  )
+}
+
+
+//partitions sorted comp set
+function groupPartition(arr) {
+    return arr.map(el => el
+        .split("")
+        .sort((a, b) => b - a)
+        .join("")
+    )
+}
+
+//use comp set
+function groupComposition(arr, zero) {
+
+
+    return arr.map((a, i) =>
+        zero[i]
+            ? `s${zero[i]}e${a}`
+            : a)
+}
+
+//use comp set
+function groupNecklace(arr) {
+    return arr.map(a => a = arr[0])
+}
+
+
+
+
+////////////////
+//CODE EXECUTION
+////////////////
+
+    let count = 8
+
+    let bin = binarySeq(count)
+    let euclids = []
+    let euclids2 = []
+
+    for (let i = 0; i < bin.length; i++) {
+      euclids.push(makeEuclid(bin[i], 2))
+      euclids2.push(makeEuclid(bin[i], 3))
+    }
+
+
+
+    let next = []
+    for (let i = 1; i <= count; i++) {
+
+      let go = makeNecklace(i,2)
+
+      for (let j = 0; j < go.length; j++) {
+
+        next.push(go[j].join(""))
+      }
+    } 
+
+
+    next = next.map(a => rotateSeq(a))
+ next = next.map(a => a.reverse())
+
+
+    let pulses = []
+    let beats = []
+    let starts = []
+
+    let paints = []
+    let mirrors = []
+    let inverses = []
+    let palindromes = []
+    let palindromes2 = []
+    let mirrorInverses = []
+
+    let ones = []
+    let zeros = []
+
+    let RAW2 = []
+    let partitions = []
+    let compGroups = []
+    let necklaces = []
+
+    let euclideans = []
+    let euclideans2 = []
+    let euclideanGroups = []
+    let euclideanGroups2 = []
+
+    let euclideansStr = []
+    let euclideansStrRev = []
+
+    let reduced = []
+    let reducedBool = []
+    let breakables = []
+    let breakablesBool = []
+    let inversionBool = []
+    let inversionMirrorBool = []
+
+    let music = []
+
+    let begin = "<sup>"
+    let end = "</sup>"
+
+    for (let i = 0; i < next.length; i++) {
+
+//uses binary
+
+      pulses.push(
+        next[i].map(a => countPulse(a))
+      )
+
+      beats.push(
+        next[i].map(a => countBeat(a))
+      )
+
+      starts.push(
+        next[i].map(a => findDownbeat(a))
+      )
+
+      paints.push(
+        next[i].map(a => paintCore(a))
+      )
+
+      mirrors.push(
+        next[i].map(a => paintMirror(a))
+      )
+
+      inverses.push(
+        next[i].map(a => paintInverse(a))
+      )
+
+      mirrorInverses.push(
+        next[i].map(a => paintMirrorInverse(a))
+      ) 
+
+      palindromes.push(
+        next[i].map(a => isPalindrome(a))
+      )
+
+      music.push([...next[i]])
+      music[i] = musicNotes(music[i])
+
+
+      inversionBool.push([...next[i]])
+      inversionBool[i] = isSelfInverse(inversionBool[i])
+
+      inversionMirrorBool.push([...next[i]])
+      inversionMirrorBool[i] = isSelfMirrorInverse(inversionMirrorBool[i])
+
+//core groups
+
+      ones.push([...next[i]])
+      ones[i] = groupOne(ones[i])
+
+      zeros.push([...next[i]])
+      zeros[i] = groupZero(zeros[i])
+
+      compGroups.push([...ones[i]])
+      compGroups[i] = groupCompSet(compGroups[i], zeros[i]) //two parameters
+
+
+//family tree
+
+      RAW2.push([...compGroups[i]])
+      RAW2[i] = groupComposition(RAW2[i], zeros[i]) //two parameters
+
+      partitions.push([...compGroups[i]])
+      partitions[i] = groupPartition(partitions[i])
+
+      necklaces.push([...compGroups[i]])
+      necklaces[i] = groupNecklace(necklaces[i])
+
+
+//rhythms types
+
+      reduced.push([...compGroups[i]])
+      reduced[i] = reduced[i].map((a, j) => makeReducable(a, zeros[i][j]))
+
+      reducedBool.push([...reduced[i]])
+      reducedBool[i] = isReducable(reduced[i], RAW2[i]) //two parameters
+
+      reduced[i] = reduceSeq(reduced[i], reducedBool[i]) 
+
+
+
+      breakables.push([...RAW2[i]])
+      breakables[i] = makeBreakable(breakables[i], pulses[i])
+
+      breakablesBool.push([...breakables[i]])
+      breakablesBool[i] = isBreakable(breakablesBool[i])
+
+
+
+      euclideans.push([...next[i]])
+      euclideans[i] = isEuclidRhythm(euclideans[i], euclids)
+
+      euclideanGroups.push([...euclideans[i]])
+      euclideanGroups[i] = isEuclidNecklace(euclideanGroups[i])
+
+      euclideans2.push([...next[i]])
+      euclideans2[i] = isEuclidRhythm(euclideans2[i], euclids2)
+
+      euclideanGroups2.push([...euclideans2[i]])
+      euclideanGroups2[i] = isEuclidNecklace(euclideanGroups2[i])
+
+
+
+      euclideansStr.push([...RAW2[i]])
+      euclideansStr[i] = isEuclidStr(euclideansStr[i], RAW2[i])
+
+      euclideansStrRev.push([...RAW2[i]])
+      euclideansStrRev[i] = isRevEuclidStr(euclideansStrRev[i], RAW2[i])
+
+      palindromes2.push(
+        RAW2[i].map(a => isPalindrome(a))
+      )
+
+
+//replacing with HTML superscript
+
+      RAW2[i] = RAW2[i].map(a => a
+                            .replace(/s/g, begin)
+                            .replace(/e/g, end)
+                           )
+
+      reduced[i] = reduced[i].map(a => a
+                                  .replace(/s/g, begin)
+                                  .replace(/e/g, end)
+                                 )
+
+    }
+
+
+    //table maker
+    let mow = []
+    mow.push(`<table style="width:100%"id="grouped-headers">`)
+    mow.push(`  
+
+    <thead>
+
+
+        <tr>
+		<th nowrap="">Pulse  <img src="tablefilter/style/themes/updown.png"></th>
+            	<th nowrap="">Beat  <img src="tablefilter/style/themes/updown.png"></th>
+           	<th>Start  <img src="tablefilter/style/themes/updown.png"></th>
+		<th nowrap="">On/Off  <img src="tablefilter/style/themes/updown.png"></th>
+
+
+
+            	<th>Inter-Onset  <img src="tablefilter/style/themes/updown.png"></th>
+		<th nowrap="">Necklace Group  <img src="tablefilter/style/themes/updown.png"></th>
+
+<th>reduced  <img src="tablefilter/style/themes/updown.png"></th>
+<th>reducable  <img src="tablefilter/style/themes/updown.png"></th>
+
+<th>broken  <img src="tablefilter/style/themes/updown.png"></th>
+<th>breakable  <img src="tablefilter/style/themes/updown.png"></th>
+
+
+
+<th>music  <img src="tablefilter/style/themes/updown.png"></th>
+
+<th>euclidean  <img src="tablefilter/style/themes/updown.png"></th>
+<th>euclidean2  <img src="tablefilter/style/themes/updown.png"></th>
+
+<th>palindrome  <img src="tablefilter/style/themes/updown.png"></th>
+<th>palindrome2  <img src="tablefilter/style/themes/updown.png"></th>
+
+<th>mirror  <img src="tablefilter/style/themes/updown.png"></th>
+<th>inverse  <img src="tablefilter/style/themes/updown.png"></th>
+
+        </tr>
+
+    </thead>
+    <tbody style="text-align:left">
+`)
+
+/*
+<th>reduced</th>
+<th>break</th>
+
+<th>eucs</th>
+<th>euc2</th>
+<th>reBool</th>
+<th>breakBool</th>
+<th>pali</th>
+*/
+
+
+
+
+    for (let i = 0; i < next.length; i++) {
+
+      for (let j = 0; j < next[i].length; j++) {
+
+
+
+//if (palindromes[i][j] == true){
+
+        mow.push(
+          `
+<tr>
+<td>${pulses[i][j]}</td>
+<td>${beats[i][j]}</td>
+<td>${starts[i][j]}</td>
+
+<td>${paints[i][j]}</td>
+
+
+
+<td>${RAW2[i][j]}</td>
+<td>${necklaces[i][j]}</td>
+
+
+<td>${reduced[i][j]}</td>
+<td>${reducedBool[i][j]}</td>
+
+<td>${breakables[i][j]}</td>
+<td>${breakablesBool[i][j]}</td>
+
+<td>${music[i][j]}</td>
+
+<td>${euclideans[i][j]}</td>
+<td>${euclideans2[i][j]}</td>
+
+<td>${palindromes[i][j]}</td>
+<td>${palindromes2[i][j]}</td>
+
+<td>${mirrors[i][j]}</td>
+<td>${inverses[i][j]}</td>
+
+
+  </tr>
+`) 
+
+//}
+
+      }
+    } 
+
+	mow.push(`
+	</tbody>
+	</table>
+	`)
+
+
+
+
+    stamp.innerHTML = mow.join("\n")
+  }
+
+brush()
+
+
+</script>
+
+
+<script src="tablefilter/tablefilter.js"></script>
+
+<script data-config>
+    var tfConfig = {
+        base_path: 'tablefilter/',
+
+                    auto_filter: {
+            delay: 0 //milliseconds
+        },
+        // filter types
+col_0: "checklist",
+        col_1: "checklist",
+        col_2: "checklist",
+
+               col_3: "checklist",
+col_4: "checklist",
+col_5: "checklist",
+col_6: "checklist",
+col_7: "checklist",
+col_8: "checklist",
+col_9: "checklist",
+col_10: "checklist",
+col_11: "checklist",        
+col_12: "checklist",
+col_13: "checklist",
+col_14: "checklist",
+col_15: "checklist",
+col_16: "checklist",          
+        
+        
+        
+
+        // column types
+        col_types: [
+            'string', 'string', 'string',
+            'string', 'number', 'number',
+            
+        ],
+
+        // filters and headers position
+        filters_row_index: 1,
+       
+                        sticky_headers: true,
+        state: { types: ['local_storage']},
+        popup_filters: false,
+
+        alternate_rows: true,
+        rows_counter: true,
+        btn_reset: true,
+        status_bar: true,
+        ignore_diacritics: true,
+        no_results_message: true,
+        enable_empty_option: false,
+        enable_non_empty_option: false,
+        loader: false,
+        mark_active_columns: false,
+        highlight_keywords: false,
+        
+         // theme
+        themes: [{ name: '' }],
+        
+
+        // sorting extension
+        extensions: [{ name: 'sort' }]
+    };
+    var tf = new TableFilter('grouped-headers', tfConfig, 2);
+    tf.init();
+</script>
+<script>
+window.setTimeout(function (){
+ return document.body.classList.remove('fade-out');
+}, 0);
+
+</script>
+<hr>
+
+  </body>
+
+</html>
